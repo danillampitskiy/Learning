@@ -34,9 +34,12 @@ storage = KeyValueStorage('path_to_file.txt')
 print(storage['name'])
 print(storage.song)
 print(storage.power)
+print(storage.last_name)
 
 # Attempting to access an unknown attribute should raise an error
 try:
     print(storage.unknown_key)
 except AttributeError as e:
-    print(str(e))  # Output: "'KeyValueStorage' object has no attribute 'unknown_key'"
+    print(str(e))
+
+    
