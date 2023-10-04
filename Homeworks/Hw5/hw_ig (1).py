@@ -42,6 +42,8 @@ fun = lambda x: x[0]
 
 for result in map_like(fun, a, b, c, d):
     print(result)
+
+    
 # output:
 # 1
 # 6: 'int' object is not subscriptable
