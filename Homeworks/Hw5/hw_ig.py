@@ -5,10 +5,10 @@
 
 def merge_elems(*elems):
     for elem in elems:
-        if isinstance(elem, (list, tuple)):
-            yield from merge_elems(*elem)
-        elif isinstance(elem, str):
+        if isinstance(elem, str):
             yield from elem
+        elif hasattr(elem, '__iter__'):
+            yield from merge_elems(*elem)
         else:
             yield elem
 
